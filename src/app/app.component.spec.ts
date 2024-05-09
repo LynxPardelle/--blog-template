@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Blog-Template' title`, () => {
+  it(`should have a counter`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Blog-Template');
+    expect(app.counter).toEqual(0);
   });
 
-  it('should render title', () => {
+  it('should render the counter', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Blog-Template');
+    expect(compiled.querySelector('#counter')?.textContent).toContain('0');
   });
 });
